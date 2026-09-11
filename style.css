@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family:
         Arial,
@@ -23,6 +27,10 @@ footer {
     border-radius: 5px;
 }
 
+#number {
+    margin: 30px 30px;
+}
+
 /* ========================================
    HEADER NAV
 ======================================== */
@@ -46,6 +54,24 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     color: #212725;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background: #314347;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .connect {
@@ -61,4 +87,212 @@ header nav ul li a {
 
 .connect:hover {
     background-color: #253538;
+}
+
+@media screen and (max-width: 900px) {
+    .connect {
+        display: none;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 3vw;
+    }
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+#hero {
+    position: relative;
+    background-image: url(assets/backgaint-mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 70px;
+    min-height: 400px;
+    gap: 5vw
+}
+
+.hero-description {
+    width: 50%;
+    text-align: justify;
+}
+
+.hero-description button {
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #314347;
+    color: #f4f1ea;
+    transition: background-color 0.3s ease;
+}
+
+.hero-description button:hover {
+    background-color: #253538;
+}
+
+.hero-description a {
+    text-decoration: none;
+    color: #314347;
+}
+
+
+#hero img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.quote-1 {
+    position: absolute;
+    transform: rotate(-12deg);
+    top: 30px;
+    right: 30px;
+    font-style: Helvetica;
+    font-size: 1.2rem;
+    width: 80px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #314347;
+
+}
+
+@media screen and (max-width: 885px) {
+    .hero-description {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .hero-description p,
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    .hero-description a {
+        display: none;
+    }
+
+    .hero-description button {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hero-description {
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .hero-description {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+#about {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #d9d4ca;
+    position: relative;
+    height: 450px;
+}
+
+
+
+.about-content {
+    width: 50%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+.about-content h4 {
+    color: #37474b;
+    margin: 0;
+}
+
+.about-content h2 {
+    color: #314347;
+    margin: 0;
+}
+
+.about-text {
+    color: #314347;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.quote-3 {
+    transform: rotate(-12deg);
+    font-style: Helvetica;
+    font-size: 1.2rem;
+    width: 50px;
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 13px;
+    border-bottom: 1px solid #314347;
+}
+
+.quote-4 {
+    position: absolute;
+    transform: rotate(-12deg);
+    top: 15px;
+    right: 45px;
+    font-style: Helvetica;
+    font-size: 1.2rem;
+    width: 80px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #314347;
+}
+
+#about img {
+    width: 50%;
+    height: auto;
+    align-self: stretch;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1050px) {
+    #about {
+        height: auto;
+    }
+
+    #about img {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    #about img {
+        display: none;
+    }
+
+    .quote-4 {
+        display: none;
+    }
+
+    .about-content {
+        width: auto;
+    }
 }
