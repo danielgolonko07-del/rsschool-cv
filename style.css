@@ -31,6 +31,16 @@ footer {
     margin: 30px 30px;
 }
 
+h4 {
+    color: #37474b;
+    margin: 0;
+}
+
+h2 {
+    color: #314347;
+    margin: 0;
+}
+
 /* ========================================
    HEADER NAV
 ======================================== */
@@ -227,16 +237,6 @@ header nav ul li a:hover::after {
     border-left: 2px solid #d9d4ca;
 }
 
-.about-content h4 {
-    color: #37474b;
-    margin: 0;
-}
-
-.about-content h2 {
-    color: #314347;
-    margin: 0;
-}
-
 .about-text {
     color: #314347;
     margin: 0;
@@ -295,4 +295,158 @@ header nav ul li a:hover::after {
     .about-content {
         width: auto;
     }
+}
+
+/* ========================================
+   SKILLS & CONTACT
+======================================== */
+
+#section-2-and-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ========================================
+   SKILLS
+======================================== */
+
+#skills {
+    display: flex;
+    width: calc(50% - 2px);
+    margin: 0;
+    padding: 0;
+    border-right: 2px solid #d9d4ca;
+    border-bottom: 2px solid #d9d4ca;
+}
+
+.skills-content {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+
+
+#skills ul {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills ul li {
+    list-style-type: none;
+    color: #314347;
+    background-color: #d9d4ca;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 885px) {
+    #skills {
+        width: 100%;
+        border-right: none;
+    }
+}
+
+/* ========================================
+   contacts
+======================================== */
+
+#contacts {
+    display: flex;
+    min-width: 400px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d9d4ca;
+
+}
+
+.contacts-content {
+    min-width: 327px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+#contacts h4 {
+    color: #37474b;
+    margin: 0;
+}
+
+#contacts h2 {
+    color: #314347;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#contacts ul {
+    margin: 0;
+    padding: 0;
+}
+
+#contacts ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#contacts a {
+    text-decoration: none;
+    color: #314347;
+}
+
+#contacts img {
+    width: 35px;
+    margin-right: 10px;
+    height: auto;
+}
+
+@media screen and (max-width: 885px) {
+    #contacts {
+        width: 100%;
+        border-right: none;
+    }
+}
+
+/* ========================================
+   CODE EXAMPLE
+======================================== */
+
+#code {
+    display: flex;
+    min-width: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d9d4ca;
+}
+
+.code-content {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 327px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+.code-text {
+    width: calc(50% - 18px);
+    margin: 0;
+    padding: 0;
+}
+
+.code-example {
+    width: calc(50% - 18px);
+    margin: 0;
+    padding: 0;
 }
