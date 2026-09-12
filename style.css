@@ -422,8 +422,7 @@ header nav ul li a:hover::after {
 
 #code {
     display: flex;
-    min-width: 400px;
-    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     border-bottom: 2px solid #d9d4ca;
@@ -432,21 +431,83 @@ header nav ul li a:hover::after {
 .code-content {
     display: flex;
     flex-wrap: wrap;
-    min-width: 327px;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     margin: 20px 0;
     padding: 0 3vw;
     border-left: 2px solid #d9d4ca;
 }
 
 .code-text {
-    width: calc(50% - 18px);
+    width: 48%;
     margin: 0;
     padding: 0;
 }
 
+.code-text p {
+    color: #37474b;
+    width: 80%;
+}
+
 .code-example {
-    width: calc(50% - 18px);
+    width: 52%;
     margin: 0;
     padding: 0;
+}
+
+.code-example pre {
+    background-color: #212725;
+    padding: 30px 25px 30px 15px;
+    border-radius: 5px;
+    color: #fff;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 885px) {
+    .code-text {
+        width: 100%;
+    }
+
+    .code-example {
+        width: 100%;
+    }
+
+    .code-content {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+#projects {
+    display: flex;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d9d4ca;
+}
+
+.projects-headline {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+.projects-line {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-right: 3vw;
+    width: auto;
+}
+
+.projects-line article {
+    padding: 30px 25px 30px 15px;
+    border: 2px solid #d9d4ca;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+    color: #212725;
 }
