@@ -304,7 +304,6 @@ header nav ul li a:hover::after {
 #section-2-and-3 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 /* ========================================
@@ -565,5 +564,79 @@ header nav ul li a:hover::after {
     .projects-line article {
         width: auto;
         height: auto;
+    }
+}
+
+/* ========================================
+   EDUCATION & LANGUAGES
+======================================== */
+
+.education-and-languages {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+
+/* ========================================
+   EDUCATION
+======================================== */
+
+#education {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d9d4ca;
+    border-right: 2px solid #d9d4ca;
+}
+
+.education-content {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+@media screen and (max-width: 885px) {
+    #education {
+        width: 100%;
+        border-right: none;
+    }
+}
+
+/* ========================================
+   LANGUAGES
+======================================== */
+
+#languages {
+    display: flex;
+    width: calc(50% - 2px);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d9d4ca;
+}
+
+.languages-content {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 3vw;
+    border-left: 2px solid #d9d4ca;
+}
+
+@media screen and (max-width: 885px) {
+    #languages {
+        width: 100%;
+    }
+
+    #languages ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
