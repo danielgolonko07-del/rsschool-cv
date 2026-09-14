@@ -30,13 +30,13 @@ footer {
     border-radius: 5px;
 }
 
-#number {
+.number {
     margin: 30px 30px;
     color: #747c78;
     font-size: 0.8rem;
 }
 
-h4 {
+.section-label {
     color: #68736f;
     margin: 0;
     font-size: 0.75rem;
@@ -169,28 +169,33 @@ header nav ul li a:hover::after {
     line-height: 1;
 }
 
-.hero-description h3 {
+.hero-role {
     color: #405256;
     font-weight: normal;
 }
 
-.hero-description button {
+.hero-button {
+    display: inline-block;
     margin-top: 20px;
     margin-right: 20px;
     padding: 13px 23px;
     border: none;
     border-radius: 7px;
     background-color: #314347;
-    color: #f4f1ea;
+    color: #f4f1ea !important;
     cursor: pointer;
     transition:
         background-color 0.3s ease,
         transform 0.3s ease;
 }
 
-.hero-description button:hover {
+.hero-button:hover {
     background-color: #253538;
     transform: translateY(-2px);
+}
+
+.hero-button::after {
+    display: none;
 }
 
 
@@ -200,7 +205,7 @@ header nav ul li a:hover::after {
     position: relative;
 }
 
-.hero-description a:not(.hero-description button)::after {
+.hero-description a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -253,7 +258,7 @@ header nav ul li a:hover::after {
 
     .hero-description p,
     .hero-description h1,
-    .hero-description h3 {
+    .hero-role {
         text-align: center;
     }
 
@@ -261,9 +266,10 @@ header nav ul li a:hover::after {
         display: none;
     }
 
-    .hero-description button {
-        margin: 20px auto 0;
-        display: block;
+    .hero-button {
+        max-width: 200px;
+        margin: 20px auto;
+        display: block ! important;
     }
 
     .quote-1 {
@@ -477,7 +483,7 @@ main {
     border-left: 2px solid #c9c4ba;
 }
 
-#contacts h4 {
+#contacts .section-label {
     color: #68736f;
     margin: 0;
 }
